@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://YOUR-FRONTEND.vercel.app"],
+    origin: ["http://localhost:5173", "https://north-star-tawny-theta.vercel.app"],
 
     credentials: true,
   }),
