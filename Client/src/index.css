@@ -1,0 +1,263 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #25253a;
+  background: #f4f5fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(ellipse at 12% 15%, #e3e4ff 0, transparent 42%),
+    radial-gradient(ellipse at 90% 85%, #e6eaff 0, transparent 38%),
+    #f7f7fc;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 38px;
+  background: #fff;
+  border: 1px solid #e9e9f2;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(36, 36, 75, 0.09);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #6258dc;
+  border-radius: 11px;
+}
+
+.auth-heading {
+  margin: 35px 0 26px;
+}
+
+.eyebrow {
+  color: #655add;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.auth-heading h1 {
+  margin: 10px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(25px, 5vw, 31px);
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+
+.auth-heading > p:last-child {
+  margin: 0;
+  color: #77778c;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 19px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  padding: 0 14px;
+  color: #28283d;
+  background: #fff;
+  border: 1px solid #dedeea;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input::placeholder {
+  color: #aaaabc;
+}
+
+.field input:focus {
+  border-color: #7569e8;
+  box-shadow: 0 0 0 3px rgba(117, 105, 232, 0.12);
+}
+
+.password-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 64px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #655add;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-link,
+.auth-footer a {
+  color: #6258dc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.small-link {
+  font-size: 12px;
+}
+
+.small-link:hover,
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-submit {
+  width: 100%;
+  min-height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  color: #fff;
+  background: #6258dc;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #5146c7;
+  transform: translateY(-1px);
+}
+
+.auth-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.alert {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.alert-error {
+  color: #b42336;
+  background: #fff0f1;
+  border: 1px solid #ffd5d9;
+}
+
+.alert-success {
+  color: #176b46;
+  background: #eafaf1;
+  border: 1px solid #c8efd9;
+}
+
+.auth-footer {
+  margin: 25px 0 0;
+  color: #74748a;
+  text-align: center;
+  font-size: 13px;
+}
+
+.auth-terms {
+  margin: 23px 0 0;
+  padding-top: 19px;
+  color: #9696a8;
+  border-top: 1px solid #eeeef5;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.dashboard {
+  width: min(700px, calc(100% - 32px));
+  margin: 70px auto;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e9e9f2;
+  border-radius: 18px;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 27px 21px;
+    border-radius: 17px;
+  }
+
+  .auth-heading {
+    margin-top: 29px;
+  }
+}

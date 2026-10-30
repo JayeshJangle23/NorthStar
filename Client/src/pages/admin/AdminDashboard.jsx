@@ -1,0 +1,4 @@
+import { Link } from "react-router-dom";
+export default function AdminDashboard() {
+  return <section className="container page-section"><div className="page-intro"><span className="eyebrow">NORTHSTAR CONTROL</span><h1>Admin <em>space.</em></h1><p>Manage the shop and keep orders moving.</p></div><div className="admin-cards"><Link className="admin-card" to="/admin/products"><span className="admin-card-icon">✳</span><h2>Products</h2><p>Create, update, and remove products from your collection.</p><span className="text-link">Manage products ↗</span></Link><Link className="admin-card" to="/admin/orders"><span className="admin-card-icon">↗</span><h2>Orders</h2><p>Review orders and update their fulfillment status.</p><span className="text-link">Manage orders ↗</span></Link></div><div className="alert alert-info">This dashboard is protected by the frontend role check. Your Express API must independently enforce admin permissions.</div></section>;
+}
