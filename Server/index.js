@@ -16,8 +16,9 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://north-star-tawny-theta.vercel.app"],
-
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 app.use(cookieParser());
