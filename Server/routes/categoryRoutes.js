@@ -38,9 +38,9 @@ const {
 const router = express.Router();
 
 
-router.get("/", getCategories);
-router.get("/:id/products", getCategoryProducts);
-router.get("/:id", getCategoryDetail);
+router.get("/",authMiddleware, getCategories);
+router.get("/:id/products",authMiddleware, getCategoryProducts);
+router.get("/:id",authMiddleware, getCategoryDetail);
 router.post("/", authMiddleware, adminMiddleware, createCategories);
 router.patch("/:id", authMiddleware, adminMiddleware, updateCategory);
 router.delete("/:id", authMiddleware, adminMiddleware, deleteCategory);

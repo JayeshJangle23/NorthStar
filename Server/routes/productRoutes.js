@@ -14,8 +14,8 @@ const upload = require("../middleware/upload.js");
 
 const router = express.Router();
 
-router.get("/", getProducts);
-router.get("/:id", getProductDetail);
+router.get("/",authMiddleware, getProducts);
+router.get("/:id",authMiddleware, getProductDetail);
 router.post("/", authMiddleware, adminMiddleware,upload.single("image") ,createProduct);
 router.patch("/:id", authMiddleware, adminMiddleware,upload.single("image") , updateProduct);
 router.patch("/:id/status", authMiddleware, adminMiddleware, updateProductStatus);
